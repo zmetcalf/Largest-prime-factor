@@ -14,10 +14,3 @@ while counter < primeFactor:
         if CheckPrime(counter):
             print counter
     counter += 1
-
-''' range() has a max
-for i in range(2, primeFactor):
-    if (primeFactor % i == 0):
-        if CheckPrime(i):
-            print i
-''' 
