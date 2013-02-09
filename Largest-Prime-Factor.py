@@ -1,5 +1,10 @@
+# http://primes.utm.edu/prove/prove2_1.html
+import math
+
 primeFactor = 600851475143
-counter = 2
+counter = 3
+sqrtOf = math.sqrt(primeFactor)
+highestValue = 0
 
 def CheckPrime(numCheck):
     i = 2
@@ -9,8 +14,10 @@ def CheckPrime(numCheck):
         i += 1
     return 1
 
-while counter < primeFactor:
+while counter < sqrtOf:
     if (primeFactor % counter == 0):
         if CheckPrime(counter):
-            print counter
-    counter += 1
+            highestValue = counter
+    counter += 2
+    
+print "The highest prime factor of %d is %d" % (primeFactor, highestValue)
